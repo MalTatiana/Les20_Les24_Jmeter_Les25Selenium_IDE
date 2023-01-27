@@ -1,0 +1,430 @@
+{
+	"info": {
+		"_postman_id": "5f8963ff-6718-43db-b714-5d40df54f4d0",
+		"name": "​​Lesson 17. API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25463624"
+	},
+	"item": [
+		{
+			"name": "POST",
+			"item": [
+				{
+					"name": "1.\t200.CREATE user without city",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Tatiana\",\r\n    \"age\":\"38\",\r\n    \"gender\":\"female\"\r\n} ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{main link}}users",
+							"host": [
+								"{{main link}}users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "1.\t200.CREATE user with city",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Tatiana\",\r\n    \"age\":\"38\",\r\n    \"gender\":\"female\",\r\n    \"city\":\"Kharkiv\"\r\n}\r\n    ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{main link}}users",
+							"host": [
+								"{{main link}}users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "1.\t200.CREATE user with city Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Tatiana\",\r\n    \"age\":\"38\",\r\n    \"gender\":\"female\",\r\n    \"city\":\"Kharkiv\"\r\n}\r\n    ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{main link}}users",
+							"host": [
+								"{{main link}}users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "1.\t400.CREATE user with gender Woman",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Tatiana\",\r\n    \"age\":\"38\",\r\n    \"gender\":\"woman\",\r\n    \"city\":\"Kharkiv\"\r\n}\r\n    ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{main link}}users",
+							"host": [
+								"{{main link}}users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "1.\t400.CREATE user shot name",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Tania\",\r\n    \"age\":\"38\",\r\n    \"gender\":\"female\",\r\n    \"city\":\"Kharkiv\"\r\n}\r\n    ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{main link}}users",
+							"host": [
+								"{{main link}}users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "БАГ   1.\t200.CREATE user with ID in body",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Tatiana\",\r\n    \"age\":\"38\",\r\n    \"gender\":\"female\",\r\n    \"id\":\"1505e6aa-0679-4258-860d-3a2284238446\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{main link}}users",
+							"host": [
+								"{{main link}}users"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "GET",
+			"item": [
+				{
+					"name": "200 GET User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{main link}}users?id=8afe2cae-cb6a-4a92-93a5-25bd63558e94",
+							"host": [
+								"{{main link}}users"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "8afe2cae-cb6a-4a92-93a5-25bd63558e94"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "400 for get information about users according name",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{main link}}users?name=Tatiana",
+							"host": [
+								"{{main link}}users"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Tatiana"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "EDIT user",
+			"item": [
+				{
+					"name": "200 Edit User",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"age\": \"38\",\r\n    \"city\": \"Kyiv\",\r\n    \"gender\": \"female\",\r\n    \"name\": \"Tatiana\",\r\n    \"id\": \"d8d4dccc-3378-4abe-9d63-13ca8303945d\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{main link}}users",
+							"host": [
+								"{{main link}}users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "БАГ 200 Edit User- Change name on shotter, then should be",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"age\": \"38\",\r\n    \"city\": \"Kyiv\",\r\n    \"gender\": \"female\",\r\n    \"name\": \"Tania\",\r\n    \"id\": \"d8d4dccc-3378-4abe-9d63-13ca8303945d\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{main link}}users",
+							"host": [
+								"{{main link}}users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "БАГ 200 Edit User - age 103",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"age\": \"103\",\r\n    \"city\": \"Kyiv\",\r\n    \"gender\": \"female\",\r\n    \"name\": \"Tatiana\",\r\n    \"id\": \"d8d4dccc-3378-4abe-9d63-13ca8303945d\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{main link}}users",
+							"host": [
+								"{{main link}}users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "БАГ 200 Edit User  add in gender Women",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"age\": \"38\",\r\n    \"city\": \"Kyiv\",\r\n    \"gender\": \"women\",\r\n    \"name\": \"Tatiana\",\r\n    \"id\": \"d8d4dccc-3378-4abe-9d63-13ca8303945d\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{main link}}users",
+							"host": [
+								"{{main link}}users"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "DELETE user",
+			"item": [
+				{
+					"name": "200 user del",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{main link}}users?id=3ff892a2-ee8c-4176-9492-7fd2900ed5d7",
+							"host": [
+								"{{main link}}users"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "3ff892a2-ee8c-4176-9492-7fd2900ed5d7"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "400 dell according name",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{main link}}users?name=Tatiana",
+							"host": [
+								"{{main link}}users"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Tatiana"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "400 dell according city",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{main link}}users?city=Kharkiv",
+							"host": [
+								"{{main link}}users"
+							],
+							"query": [
+								{
+									"key": "city",
+									"value": "Kharkiv"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "400 dell according body",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"age\": 38,\r\n    \"city\": \"Kharkiv\",\r\n    \"gender\": \"female\",\r\n    \"name\": \"Tatiana\",\r\n    \"id\": \"3ff892a2-ee8c-4176-9492-7fd2900ed5d7\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{main link}}users",
+							"host": [
+								"{{main link}}users"
+							],
+							"query": [
+								{
+									"key": "city",
+									"value": "Kharkiv",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
