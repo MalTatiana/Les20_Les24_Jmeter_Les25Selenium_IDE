@@ -1,0 +1,470 @@
+{
+  "id": "fe24042f-e934-4fbc-ae9d-bf28f394c834",
+  "version": "2.0",
+  "name": "Intertop Test",
+  "url": "https://intertop.ua",
+  "tests": [{
+    "id": "06ddfab6-afb4-4156-b65d-0e1ca0c50b06",
+    "name": "negative Test registartion 1 case",
+    "commands": [{
+      "id": "dcb676eb-643a-4a04-a39d-69df406a0f15",
+      "comment": "",
+      "command": "open",
+      "target": "https://intertop.ua/ua/?t=1676027625924",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "beab2835-99ee-4a42-a262-7e9a9ba3a671",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1550x838",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "62a252c9-09da-426f-87a3-bc8dddc5709a",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.auth-ico",
+      "targets": [
+        ["css=.auth-ico", "css:finder"],
+        ["xpath=//div[@id='auth_block']/div", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div[2]/div/div", "xpath:position"]
+      ],
+      "value": "50000"
+    }, {
+      "id": "12791e5b-47b1-43eb-9dab-8be8b64fc552",
+      "comment": "",
+      "command": "click",
+      "target": "css=.auth-ico",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ce5942e6-25f2-4f64-8635-98c407612881",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "xpath=//a[contains(text(),'Створити акаунт')]",
+      "targets": [],
+      "value": "50000"
+    }, {
+      "id": "b8072abc-fbc9-4721-8b50-9ca6955afb7e",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[contains(text(),'Створити акаунт')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "81b35c3e-a39b-4d0f-8634-f21cdbbb141d",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=#email_or_phone",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "c6ba96a4-d625-4a1b-bff6-4bbf030def78",
+      "comment": "",
+      "command": "click",
+      "target": "css=#email_or_phone",
+      "targets": [
+        ["id=email_or_phone", "id"],
+        ["name=email_or_phone", "name"],
+        ["css=#email_or_phone", "css:finder"],
+        ["xpath=//input[@id='email_or_phone']", "xpath:attributes"],
+        ["xpath=//div[@id='__BVID__69']/div/div/input", "xpath:idRelative"],
+        ["xpath=//form/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c9dd15de-df58-4306-b8da-308f1abd18e6",
+      "comment": "",
+      "command": "type",
+      "target": "css=#email_or_phone",
+      "targets": [],
+      "value": "68099051531"
+    }, {
+      "id": "3f5c9633-1691-493b-b7a6-5ce8a21efd71",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=#password",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "1bbe2dc0-71aa-4ba9-b332-fc09eb9a6cd4",
+      "comment": "",
+      "command": "click",
+      "target": "css=#password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[@id='__BVID__72']/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e3fcb59e-0cbf-4729-9536-739f649d20f5",
+      "comment": "",
+      "command": "type",
+      "target": "css=#password",
+      "targets": [],
+      "value": "12345"
+    }, {
+      "id": "cfd3b157-96f8-4b8d-9c42-6a2746653dbc",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "xpath=//div[3]/button",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "c103f402-5136-48fb-a78d-56e25168d373",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[3]/button",
+      "targets": [
+        ["css=.IButton", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='auth_block']/div[3]/div/div/div/div/div[3]/div/form/div[3]/button", "xpath:idRelative"],
+        ["xpath=//div[3]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "dfaa1793-7984-487a-97fb-c7ba09a45bb6",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "id=__BVID__69__BV_feedback_invalid_",
+      "targets": [],
+      "value": "50000"
+    }, {
+      "id": "92b83206-87eb-433c-83ad-c11b86e92a07",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.IButton",
+      "targets": [
+        ["css=.IButton", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='auth_block']/div[3]/div/div/div/div/div[3]/div/form/div[3]/button", "xpath:idRelative"],
+        ["xpath=//div[3]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ee081597-e423-4063-a33b-c423b63ffa0e",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=__BVID__69__BV_feedback_invalid_",
+      "targets": [
+        ["id=__BVID__69__BV_feedback_invalid_", "id"],
+        ["css=#\\__BVID__69__BV_feedback_invalid_", "css:finder"],
+        ["xpath=//div[@id='__BVID__69__BV_feedback_invalid_']", "xpath:attributes"],
+        ["xpath=//div[@id='__BVID__69']/div/div[2]", "xpath:idRelative"],
+        ["xpath=//form/div/div/div[2]", "xpath:position"]
+      ],
+      "value": "Перевірте правильність введення"
+    }, {
+      "id": "eedd8edf-41ef-4028-84fb-2b97b73412d9",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=#\\__BVID__72__BV_feedback_invalid_",
+      "targets": [
+        ["id=__BVID__72__BV_feedback_invalid_", "id"],
+        ["css=#\\__BVID__72__BV_feedback_invalid_", "css:finder"],
+        ["xpath=//div[@id='__BVID__72__BV_feedback_invalid_']", "xpath:attributes"],
+        ["xpath=//div[@id='__BVID__72']/div/div[2]", "xpath:idRelative"],
+        ["xpath=//form/div[2]/div/div[2]", "xpath:position"]
+      ],
+      "value": "Пароль повинен бути не менше ніж 6 символів"
+    }]
+  }, {
+    "id": "34b88f3b-318b-4081-b324-5a8aaca02bc9",
+    "name": "Negative enter Test 2 case",
+    "commands": [{
+      "id": "269ae3f8-54d5-4aeb-89d3-3037d18ed65e",
+      "comment": "",
+      "command": "open",
+      "target": "https://intertop.ua/ua/?t=1676027625924",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3436647d-af3b-486e-a01e-5b615f87f416",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1550x838",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ccc40bf6-86d6-4451-ba4b-bdd97804adc7",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "xpath=//div[4]/div/div[2]/div/div",
+      "targets": [
+        ["css=.auth-ico", "css:finder"],
+        ["xpath=//div[@id='auth_block']/div", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div[2]/div/div", "xpath:position"]
+      ],
+      "value": "50000"
+    }, {
+      "id": "0fbb6411-3146-460f-9d7d-ffbeeeac0c45",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[4]/div/div[2]/div/div",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6d9c49d8-1974-4e3a-99f3-53aa98cc69b6",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "xpath=//a[contains(text(),'Увійти')]",
+      "targets": [
+        ["linkText=Увійти", "linkText"],
+        ["css=.login-tab--button:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Увійти')]", "xpath:link"],
+        ["xpath=//div[@id='auth_block']/div[3]/div/div/div/div/div[2]/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '')])[27]", "xpath:href"],
+        ["xpath=//div[3]/div/div/div/div/div[2]/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Увійти')]", "xpath:innerText"]
+      ],
+      "value": "50000"
+    }, {
+      "id": "0930b7f0-3052-4143-a63e-13ec0b912a71",
+      "comment": "",
+      "command": "click",
+      "target": "css=#email_or_phone",
+      "targets": [
+        ["id=email_or_phone", "id"],
+        ["name=email_or_phone", "name"],
+        ["css=#email_or_phone", "css:finder"],
+        ["xpath=//input[@id='email_or_phone']", "xpath:attributes"],
+        ["xpath=//div[@id='__BVID__57']/div/div/input", "xpath:idRelative"],
+        ["xpath=//form/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1e62cd54-e5e1-4f8b-b556-61e635c9bea6",
+      "comment": "",
+      "command": "type",
+      "target": "css=#email_or_phone",
+      "targets": [],
+      "value": "6545548788"
+    }, {
+      "id": "69fd7b63-375d-44fa-9454-84d3c1b957c4",
+      "comment": "",
+      "command": "click",
+      "target": "css=#password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[@id='__BVID__60']/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d7209c32-56fd-44ff-a529-b87b7970d9fe",
+      "comment": "",
+      "command": "click",
+      "target": "css=.visibility",
+      "targets": [
+        ["css=.visibility", "css:finder"],
+        ["xpath=//div[@id='__BVID__76']/div/div/div/div/span", "xpath:idRelative"],
+        ["xpath=//form/div[2]/div/div/div/div/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0d8c021b-0c74-4d60-917c-d126b1637aff",
+      "comment": "",
+      "command": "type",
+      "target": "css=#password",
+      "targets": [],
+      "value": "59884113"
+    }, {
+      "id": "00b6876b-9b7e-4983-a5e3-db5b2bb691f9",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "xpath=//button[@type='submit']",
+      "targets": [
+        ["css=.IButton", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='auth_block']/div[3]/div/div/div/div/div[3]/div/form/div[4]/button", "xpath:idRelative"],
+        ["xpath=//div[4]/button", "xpath:position"]
+      ],
+      "value": "30000"
+    }, {
+      "id": "a7a91b5a-be27-4f09-8f18-2697dd4f0b40",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//button[@type='submit']",
+      "targets": [
+        ["css=.IButton", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='auth_block']/div[3]/div/div/div/div/div[3]/div/form/div[4]/button", "xpath:idRelative"],
+        ["xpath=//div[4]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "67dad0d1-ff37-47a4-86d1-bf7dc127c5a2",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[@type='submit']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2961b3b0-f749-4d26-adde-34538cfb9b70",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=#\\__BVID__57__BV_feedback_invalid_",
+      "targets": [
+        ["id=__BVID__57__BV_feedback_invalid_", "id"],
+        ["css=#\\__BVID__57__BV_feedback_invalid_", "css:finder"],
+        ["xpath=//div[@id='__BVID__57__BV_feedback_invalid_']", "xpath:attributes"],
+        ["xpath=//div[@id='__BVID__57']/div/div[2]", "xpath:idRelative"],
+        ["xpath=//form/div/div/div[2]", "xpath:position"]
+      ],
+      "value": "Невірний логін або пароль"
+    }]
+  }, {
+    "id": "7a42450a-668f-4c7c-b1a1-15c6d7f9f71e",
+    "name": "positive adding to wish list test 3 case",
+    "commands": [{
+      "id": "4ee3d5d8-9feb-4913-bb55-77fd211b7340",
+      "comment": "",
+      "command": "open",
+      "target": "https://intertop.ua/ua/deals/10950/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4544b877-0cec-429a-9a76-3da2015970c6",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1550x838",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f77a108d-33b5-4193-b4e1-3e57848d48ad",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "xpath=//div/label/span[2]",
+      "targets": [
+        ["css=.product_card_5111183 .UiLikeBtn__img", "css:finder"],
+        ["xpath=//div[@id='app']/div[2]/div/div/div[3]/div[5]/div/div/div/div/div/label/span[2]", "xpath:idRelative"],
+        ["xpath=//div/label/span[2]", "xpath:position"]
+      ],
+      "value": "30000"
+    }, {
+      "id": "57fec3b8-45fc-4656-a953-2525d9decbe3",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div/label/span[2]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "978ea23a-eb7d-467d-88c7-97f184326203",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.active > a > img",
+      "targets": [
+        ["css=.active > a > img", "css:finder"],
+        ["xpath=(//img[@alt='<div key=\"0\">Braska</div><div key=\"1\">Кеди низькі</div>'])[4]", "xpath:img"],
+        ["xpath=//div[@id='carousel_2nziy6zcily']/div/div/div[4]/a/img", "xpath:idRelative"],
+        ["xpath=//div[4]/a/img", "xpath:position"]
+      ],
+      "value": "50000"
+    }, {
+      "id": "ded2a270-6bb8-4a53-abc2-44046e39f3b6",
+      "comment": "",
+      "command": "click",
+      "target": "css=.jsShowPrice:nth-child(3) > .current-size",
+      "targets": [
+        ["css=.jsShowPrice:nth-child(3) > .current-size", "css:finder"],
+        ["xpath=//div[@id='ModalFavouriteSizeContent']/div[2]/div/div/label/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/label/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5cac5c90-0fda-4937-9a7c-1a2cfb82cb4b",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.by-this-item",
+      "targets": [
+        ["css=.by-this-item", "css:finder"],
+        ["xpath=//div[@id='ModalFavouriteSizeContent']/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[2]/button", "xpath:position"]
+      ],
+      "value": "50000"
+    }, {
+      "id": "d63e3dc5-a2a7-4467-b9b0-932faa3cb2ed",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.by-this-item",
+      "targets": [
+        ["css=.by-this-item", "css:finder"],
+        ["xpath=//div[@id='ModalFavouriteSizeContent']/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[2]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "26e5ff7b-e2a8-4bf4-a121-19b1a144fdf7",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.by-this-item",
+      "targets": [
+        ["css=.by-this-item", "css:finder"],
+        ["xpath=//div[@id='ModalFavouriteSizeContent']/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[2]/button", "xpath:position"]
+      ],
+      "value": "ОБРАТИ"
+    }, {
+      "id": "e8576053-d402-45ac-8c7e-42176b2d9b05",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[2]/div/div[2]/button",
+      "targets": [
+        ["css=.by-this-item", "css:finder"],
+        ["xpath=//div[@id='ModalFavouriteSizeContent']/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[2]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "be21c76d-939b-4d34-9b3b-4f8885eb6d3b",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "xpath=//div[2]/a/span",
+      "targets": [],
+      "value": "50000"
+    }, {
+      "id": "5e096d1d-752e-42d4-95b6-46f1b9d93885",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//div[2]/a/span",
+      "targets": [
+        ["css=.fav-count", "css:finder"],
+        ["xpath=//div[@id='app_global']/div[2]/div[3]/div[4]/div/div[2]/div[2]/a/span", "xpath:idRelative"],
+        ["xpath=//div[2]/a/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7e55f28e-1486-4f10-b400-7269c0adcb15",
+      "comment": "",
+      "command": "click",
+      "target": "css=.user-menu-item > a",
+      "targets": [
+        ["linkText=2", "linkText"],
+        ["css=.user-menu-item > a", "css:finder"],
+        ["xpath=//div[@id='app_global']/div[2]/div[3]/div[4]/div/div[2]/div[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/ua/account/wishlist/')]", "xpath:href"],
+        ["xpath=//div[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'2')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "f61a251f-82e8-47e7-8785-bc7e687828fb",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["https://intertop.ua/"],
+  "plugins": []
+}
